@@ -3,6 +3,7 @@ const buttons = document.querySelectorAll('button');
 const operators = document.querySelectorAll('.operator');
 const clearButton = document.querySelector('.clear');
 const equalButton = document.querySelector('.equal');
+const backButton = document.querySelector('.back');
 
 
 display.value = 0;
@@ -52,6 +53,12 @@ if (clearButton) {
     clearButton.addEventListener('click', () => {
         display.value = '0';
         shouldClear = true;
+    });
+}
+
+if (backButton) {
+    backButton.addEventListener('click', () => {
+        display.value = display.value.slice(0, -1);
     });
 }
 
